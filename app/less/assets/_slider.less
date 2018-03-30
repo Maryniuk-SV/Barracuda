@@ -1,0 +1,105 @@
+.slider__container {
+	position: relative;
+    min-height: 600px;
+    width: 768px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.showing {
+	opacity: 1;
+    z-index: 2; 
+}
+
+.slider__item {
+    position: absolute;
+    width: 100%;
+    min-height: 500px; 
+    & h3{
+        color: #f6303e;
+        font-family: @DINProBold;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 52px;
+        text-transform: uppercase;
+        letter-spacing: 0.72px;
+        margin-bottom: 35px;
+    }
+
+    .slider__desc {
+        max-width: 330px;
+        color: #8da5ba;
+        font-family: @SegoeUISemilight;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.28px;
+        margin-bottom: 60px;
+    }
+    & img {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-shadow: 2px 2px 10px rgba(0,0,0,.3);
+    } 
+}
+
+.more {
+    border: none;
+    background-color: #f6303e;
+    background-image: linear-gradient(45deg, #1b1b1b 0%, #453f3f 100%);
+    color: #fff;
+    height: 60px;
+    font-family: @DINProMedium;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    width: 180px;
+    outline: none;
+    position: relative;
+    &::before{
+        content: "\f061";
+        font-family: @FontAwesome;
+        display: block;
+        font-weight: 200;
+        position: absolute;
+        top: 23px;
+        right: 24px;
+    }
+}
+
+.slider__controls {
+    position: absolute;
+    right: -170px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    & .control{
+        padding: 5px 0;
+        cursor: pointer;
+        & span{
+            display: block;
+            width: 20.5px;
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: background-color 0.5s ease, width .5s;
+        }
+        &:hover span {
+            width: 40px;
+            background-color: #d60202;
+        }
+    }
+}

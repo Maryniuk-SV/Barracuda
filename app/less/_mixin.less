@@ -1,0 +1,20 @@
+.angle-down{
+	&::before{
+		content: "\f107";
+		font-family: @FontAwesome;
+		display: block;
+		position: absolute;
+		bottom: 4px;
+		right: -1px;
+		color: @headerInfoColor;	}
+	}
+	.icon{
+		&::after{
+			display: block;
+			position: absolute;
+			font-family: @FontAwesome;
+			color: @headerInfoColor;
+			font-size: 13px;
+			cursor: pointer;
+		}
+	}
