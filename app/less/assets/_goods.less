@@ -1,210 +1,169 @@
-
-
-// .wraper {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center; 
-// }
-
-// .goods {
-//     margin: 0 0 120px 0;
-// }
-
-// .goods h2 {
-//     color: @colorH2;
-//     font-family: @mainText;
-//     font-size: 30px;
-//     font-weight: 800;
-//     line-height: 12px;
-//     padding: 7px 4px 0 0;
-//     text-align: center;
-//     text-transform: uppercase;
-// }
-
-// .goods p {
-//     color: @colorAction;
-//     font-family: "ProximaNovaT-Thin";
-//     font-size: 14px;
-//     font-weight: 400;
-//     line-height: 20px;
-//     text-align: center;
-// }
-
-// .goods a {
-//     text-decoration: none;
-// }
-
-// .goodsItmes {
-//     width: 255px;
-//     height: 450px;
-//     margin-top: 59px; 
-// }
-
-// .goodsItmes h3 {
-//     color: #212121;
-//     cursor: pointer;
-//     font-family: @mainText;
-//     font-size: 16px;
-//     font-weight: 800;
-//     line-height: 22px;
-//     margin-top: 50px;
-//     transition: .25s;
-
-//     &:hover {
-//         color: #dc2f2f; 
-//     }
-// }
-
-// .h3First{
-//     padding-top: 11%;
-// }
-
-// .h3Second {
-//     padding-top: 13%;
-// }
-
-// .h3Third {
-//     padding-top: 20%;
-// }
-
-// .h3Fourth {
-//     padding-top: 10%;
-// }
-
-// .goodsText a {
-//     color: @priceTextColor;
-//     font-family: @sliderText;
-//     font-size: 14px;
-//     font-weight: 400;
-//     line-height: 22px;
-
-//     &:hover {
-//         font-weight: 600;
-//     }
-// }
-
-// .goodContainer {
-//     position: relative;
-// }
-
-// .overlay {
-//     position: absolute;
-//     top: -30px;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     height: 315px;
-//     width: 255px;
-//     opacity: 0;
-//     transition: .3s ease;
-//     background-color: rgba(33, 33, 33, 0.9);
-// }
-  
-// .goodContainer:hover .overlay {
-//     opacity: 1;
-// }
-
-// .action {
-//     border: 1px solid @colorAction;
-//     padding: 2px 4px;
-//     margin-left: 70%;
-//     color: @colorAction;
-//     font-family: @secondFont;
-//     font-size: 10px;
-//     font-weight: 300;
-//     text-transform: uppercase;
-// }
-
-// .shoppingCart, .detal {
-//     border: 1px solid @colorWhite;
-//     display: flex;
-//     margin: 20px 0 0 20%;   
-//     width: 160px;
-//     height: 48px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     transition: .30s;
-
-//     p {
-//         font-family: @secondFont;
-//         font-size: 14px;
-//         font-weight: 400;
-//         line-height: 38px;
-//         text-transform: uppercase;
-//         color: @colorWhite;
-//     }
-// }
-
-// .shoppingCart:hover, .detal:hover {
-//     border: none;
-//     background-color: @priceIconColor;
-
-//     .fa-shopping-cart,
-//     .fa-info {
-//         color: @colorWhite;
-//     }
-// }
-
-// .fa-shopping-cart,
-//     .fa-info  {
-//         margin-right: 8px;
-//         color: @goodsButton;
-//     }
-
-// .fa-info {
-//     border: 1px solid @goodsButton;
-//     border-radius: 50%;
-//     padding: 1px 5px;
-
-//     &:hover {
-//         border: 1px solid @colorWhite;
-//     }
-// }
-
-// .shoppingCart {
-//     margin-top: 31%;
-// }
-
-// .firstPhon {
-//     margin: 11% 0 0 37%;
-// }
-
-// .myBiont {
-//     margin: 5% 0 0 38%;
-// }
-
-// .myPhona {
-//     margin: 15% 0 0 10%;
-// }
-
-// .lastPhon {
-//     margin: 12% 0 0 8.6%;
-// }
-
-// .ovFirst,
-// .ovLast {
-//     margin-top: 18px;
-// }
-
-// .price {
-//     margin: 15% 62% 0 0;
-
-//     del {
-//         color: @priceIconColor;
-//         font-family: @mainText;
-//         font-size: 16px;
-//         font-weight: 500;
-//         margin-left: 18px;
-//         line-height: 38px;
-//     }
-// }
-
-// .price  p {
-//     color: @colorWhite;
-//     font-family: @mainText;
-//     font-size: 20px;
-//     font-weight: 500;
-//     margin-left: 14px;
-//     line-height: 15px;
-// }
+.goods{
+    margin-bottom: 100px;
+    &__container{
+        & h2{
+            color: #202945;
+            font-family: @DINProBold ;
+            font-size: 30px;
+            line-height: 22px;
+            margin-bottom: 20px;
+            & + p{
+                text-align: center;
+                margin-bottom: 50px;
+                & a{
+                    color: @GoodsColor;
+                    font-family: @ProximaNovaThin;
+                    font-size: 14px;
+                    line-height: 22px;
+                    position: relative;
+                    .angle-down;
+                    &::before{
+                        right: -5px;
+                        top: 5px;
+                        transform: rotateZ(-90deg);
+                        color: @GoodsColor;
+                    }
+                }
+            }
+        }
+    }
+    &__item{
+        width: 255px;
+        &:nth-child(1) .goods__preview{
+            background-image: url("../img/slider__item-2.png");
+        }
+        &:nth-child(2) .goods__preview{
+            background-image: url("../img/slider__item-4.png");
+        }
+        &:nth-child(3) .goods__preview{
+            background-image: url("../img/slider__item-3.png");
+        }
+        &:nth-child(4) .goods__preview{
+            background-image: url("../img/slider__item-5.png");
+        }
+    }
+    &__preview{
+        min-height: 315px;
+        margin-bottom: 45px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        overflow: hidden;
+        & .promo{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+            & span{
+                display: block;
+                border: 1px solid @GoodsColor;
+                color: @GoodsColor;
+                font-family: @SegoeUIRegular;
+                font-size: 10px;
+                padding: 0 5px;
+                text-transform: uppercase;
+            }
+        }
+        &:hover > .overlay{
+            left: 0;
+        }
+    }
+    & .overlay{
+        transition: left .4s;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        left: -350px;
+        background-color: rgba(33, 33, 33, .9);
+        text-transform: uppercase;
+        font-family: @SegoeUIRegular;
+        & a{
+           color: #fff;
+        }
+        &__content{
+            z-index: 2;
+        }
+        &__basket{
+            margin-bottom: 20px;
+        }
+        &__basket, &__detal{
+            width: 160px;
+            height: 48px;
+            border: 1px solid #ffffff;
+            display: block;
+            text-align: center;
+            line-height: 48px;
+            transition: all .4s;
+            & i {
+                color: #f6303e;
+                margin-right: 5px;
+                font-size: 16px;
+                transition: all .4s;
+                
+                &.fa-info{
+                    font-size: 13px;
+                    line-height: 15px;
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+                    border: 1px solid #f6303e;
+                    border-radius: 50%;
+                }
+            }
+            &:hover{
+                background-color: #f6303e;
+                border-color: #f6303e;
+                color: #fff;
+                & i{
+                    color: #fff;
+                    border-color: #fff;
+                }
+            }
+        }
+        & .price{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-family: @DINProMedium;
+            font-size: 20px;
+            color: #fff;
+            z-index: 2;
+            &__before{
+                font-size: 16px;
+                margin-bottom: 8px;
+                color: #f6303e;
+                text-decoration: line-through;
+            }
+        }
+    }
+    &__desc{
+        & h3{
+            margin-bottom: 15px;
+        }
+        & a{
+            color: #212121;
+            font-family: @DINProBold ;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 15px;
+            transition: color .4s;
+            &:hover{
+                color: #dc2f2f;
+            }
+        }
+        & p{
+            color: #8da5ba;
+            font-family: @SegoeUISemilight;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}
+.items__wrap{
+    display: flex;
+    justify-content: space-between;
+}
