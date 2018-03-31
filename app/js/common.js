@@ -1,3 +1,20 @@
+(function($) {
+	$(function() {
+		$('input, select').styler({
+			selectPlaceholder: "Вид діяльності",
+		});
+		$( "#ui-datepicker-div" ).cssClip({"z-index": 10});
+		$( "#datepicker" ).datepicker();
+    $( "#anim" ).on( "change", function() {
+			$( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+			$( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
+    });
+	});
+})(jQuery);
+
+
+
+
 var slides = document.querySelectorAll('#slides .slider__item');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide,2000);

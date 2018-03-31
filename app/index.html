@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.min.css">
-
+  
   <title>Barracuda</title>
 </head>
 <body>
@@ -95,7 +95,7 @@
         </div>
       </div>
     </header>
-
+    
     <section class="slider">
       <div class="wrapper">
         <div id="slides" class="slider__container">
@@ -158,7 +158,7 @@
         </div>
       </div>
     </section>
-
+    
     <section class="goods">
       <div class="wrapper">
         <div class="goods__container">
@@ -259,45 +259,51 @@
                 <p>BioStation A2 нашпигований найкращим у світі процесором на 4 ядра, що забеспечує найкращий у світі</p>
               </div>
             </div>
-
+            
           </div> 
         </div>
       </div>
     </section>
-
+    
     <section class="registration">
-      <div class="container">
-        <div class="registrationForm">
-          <h2>
-            Форма реєстрації
-          </h2>                  
-          <form action="">
-            <div class="wraperInput">
-              <div>
-                <input type="text" placeholder="Ім’я">
-                <input type="number" placeholder="Телефон">
-                <input list="browsers" placeholder="Вид діяльності">
-                <datalist id="browsers">
-                  <option value="Internet Explorer">
-                    <option value="Firefox">
-                      <option value="Chrome">
-                        <option value="Opera">
-                          <option value="Safari">
-                          </datalist>                               
-                        </div>
-                        <div class="blockForm">
-                          <input type="email" placeholder="E-mail">
-                          <input type="text" placeholder="Організація">
-                          <input type="text" placeholder="Дата">                     
-                        </div>                          
-                      </div>
-                      <input type="text" placeholder="Повідомлення" class="message">
-                      <input type="submit" class="submit">                      
-                    </form>   
-                  </div>
-                </div>
-              </section>
-            </div>
-            <script src="js/scripts.min.js"></script>
-          </body>
-          </html>
+      <div class="wrapper">
+        <div class="registration__container">
+          <h2>Форма реєстрації</h2>
+          <div class="registration__form">
+            <form action="#" class="form">
+              <input type="text" placeholder="Ім’я" required>
+              <input type="email" placeholder="E-mail" required>
+              <input type="tel" placeholder="Телефон" required>
+              <input type="text" placeholder="Організація" required>
+              <select>
+                <option></option>
+                <option>Навчання</option>
+                <option>Надання послуг</option>
+                <option>Економічна діяльність</option>
+                <option>Інвестиції</option>
+              </select>
+              <input class="datepicker" id="datepicker" type="text" placeholder="Дата">
+              <textarea placeholder="Повідомлення" required></textarea>
+              <button type="submit" class="form__button">надіслати</button>  
+            </form>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__content">
+          <div class="footer__copy">
+            <p>&copy; 2018 Barracuda. All rights reserved</p>
+          </div>
+          <div class="footer__made">
+            <p>Зроблено силами <a href="#">Otakoyi <span class="black"></span><span class="red"></span></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/scripts.min.js"></script>
+</body>
+</html>
