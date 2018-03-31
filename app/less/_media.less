@@ -34,3 +34,26 @@
 		}
 	}
 }
+
+@media only screen and (max-width:576px) {
+	.jq-selectbox{
+		display: none;
+	}
+	.registration {
+		& h2{
+			display: none;
+			&.hide{
+				display: block;;
+			}
+		}
+		& .organization, & .datepicker, & select{
+			display: none;
+		}
+		& .form__button{
+			width: 100%;
+		}
+	}
+	.footer__content{
+		justify-content: space-around;
+	}
+}

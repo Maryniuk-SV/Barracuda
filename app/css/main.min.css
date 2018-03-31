@@ -5902,6 +5902,9 @@ body {
   line-height: 38px;
   margin-bottom: 50px;
 }
+.registration h2.hide {
+  display: none;
+}
 .registration__form {
   max-width: 730px;
   margin: 0 auto;
@@ -6159,5 +6162,29 @@ div#ui-datepicker-div {
   }
   .registration__form .form__button {
     margin-top: 25px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .jq-selectbox {
+    display: none;
+  }
+  .registration h2 {
+    display: none;
+  }
+  .registration h2.hide {
+    display: block;
+  }
+  .registration .organization,
+  .registration .datepicker,
+  .registration select {
+    display: none;
+  }
+  .registration .form__button {
+    width: 100%;
+  }
+  .footer__content {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 }
