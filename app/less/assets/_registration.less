@@ -33,9 +33,12 @@
         & input{
             box-sizing: border-box;
         }
-        & input, & textarea{
-            &:focus::placeholder{
-                color: transparent;
+        & input, & select, & textarea{
+            &:focus{
+                box-shadow: 0 0 0 1px #0b1e44, inset 0 0 0 1px #d1d4db;
+                &::placeholder{
+                    color: transparent;
+                }
             }
         }
         & .jq-selectbox{

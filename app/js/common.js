@@ -10,6 +10,17 @@
 			$( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
     });
 	});
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > $(this).height()) {
+			$('.to__top').addClass('to__top--active');
+		}else {
+			$('.to__top').removeClass('to__top--active');
+		}
+	});
+	$('.to__top').click(function() {
+		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	});
 })(jQuery);
 
 
