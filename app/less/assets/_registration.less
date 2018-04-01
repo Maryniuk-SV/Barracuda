@@ -1,6 +1,13 @@
 .registration{
     margin: 0 auto;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
+    &__container{
+        max-width: 950px;
+        padding: 55px 0;
+        margin: 0 auto;
+        background-color: #f6f6f6;
+        background-image: linear-gradient(-40deg, #dcdcdc 0%, #fbfbfb 100%);
+    }
     & h2{
         color: @hColor ;
         font-family: @DINProBold;
@@ -63,12 +70,27 @@
                     line-height: 40px;
                 }
             }
-            &__trigger-arrow{
-                top: 18px;
-                transition: all .4s;
-                &:hover{
-                    color: @GoodsColor;
+            &__trigger{
+                .angle-down;
+                &::before{
+                    right: 12px;
+                    bottom: 6px;
                 }
+            }
+            &__trigger-arrow{
+                width: 0;
+                height: 0;
+                display: none;
+            }
+        }
+        & label{
+            position: relative;
+
+            & i{
+                position: absolute;
+                top: 14px;
+                right: 15px;
+                color: @GoodsColor;
             }
         }
         & select option{
