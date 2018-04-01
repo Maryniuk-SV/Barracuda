@@ -6,8 +6,6 @@ var gulp           = require('gulp'),
 		cleanCSS       = require('gulp-clean-css'), 
 		rename         = require('gulp-rename'),
 		del            = require('del'),      
-		imagemin       = require('gulp-imagemin'),
-		pngquant 			 = require('imagemin-pngquant'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		notify         = require("gulp-notify");
@@ -52,7 +50,7 @@ gulp.task('less', function() {
 	.pipe(less({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-	// .pipe(cleanCSS())
+	.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
